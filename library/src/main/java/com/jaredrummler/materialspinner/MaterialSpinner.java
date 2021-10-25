@@ -318,7 +318,7 @@ public class MaterialSpinner extends TextView {
             Bundle bundle = (Bundle) savedState;
             selectedIndex = bundle.getInt("selected_index");
             nothingSelected = bundle.getBoolean("nothing_selected");
-            if (adapter != null) {
+            if (adapter != null && !adapter.isEmpty()) {
                 setTextColor(textColor);
                 setText(adapter.getItemText(selectedIndex));
             }
